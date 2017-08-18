@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Artifact'){
             steps {
-                archiveArtifacts './release.tar.gz'
+                archiveArtifacts 'release.tar.gz'
             }
         }
         stage('Github (ToDo)') {
