@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Zip') { 
             steps { 
-                sh 'tar -C /cosnics/master/current --exclude=\'files/configuration/configuration.xml\' --exclude=\'generatedJUnitFiles\' --exclude=\'build-reports\' --exclude=\'storage/*\' -czvf ./release.tar.gz *'
+                sh 'tar --exclude=\'files/configuration/configuration.xml\' --exclude=\'generatedJUnitFiles\' --exclude=\'build-reports\' --exclude=\'storage/*\' -czvf ./release.tar.gz -C /cosnics/master/current *'
             }
         }
         stage('Artifact'){
